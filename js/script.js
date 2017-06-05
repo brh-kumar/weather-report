@@ -34,7 +34,7 @@ function fetchAndRenderData(url){
 
 function handleError(data) {
 	var dataContainer = $('.js-weather-data-container');
-	dataContainer.append('<div class="error"><h2 class="text-center">' + (data.error && data.error.message) || 'Somthing went wrong please try again!' + '</h2></div>');
+	dataContainer.append('<div class="error"><h2 class="text-center">' + (data && data.error && data.error.message) || 'Somthing went wrong please try again!' + '</h2></div>');
 
 	$('.heading').addClass('hidden');
 	$('#js-chart-container').addClass('hidden');

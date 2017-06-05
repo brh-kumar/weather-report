@@ -15,8 +15,8 @@ $(document).ready(function(){
 		fetchAndRenderData(apiUrl + lat + ',' + lon);
 	}
 
-	function errorInGetGeoLocation(){
-	    handleError({error: {messsage: 'Geolocation not found!'} })
+	function errorInGetGeoLocation(e){
+	    handleError({error: {message: (e && e.message === 'User denied Geolocation' && 'Please enable location acess') || 'Geolocation not found!'} })
 	}
 });
 
@@ -33,6 +33,7 @@ function fetchAndRenderData(url){
 }
 
 function handleError(data) {
+	console.log(data)
 	var dataContainer = $('.js-weather-data-container');
 	dataContainer.append('<div class="error"><h2 class="text-center">' + (data && data.error && data.error.message) || 'Somthing went wrong please try again!' + '</h2></div>');
 

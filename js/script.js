@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var apiUrl = "http://api.apixu.com/v1/forecast.json?key=177d15a9bd724b8a934153041170406&q=";
+	var apiUrl = "https://api.apixu.com/v1/forecast.json?key=177d15a9bd724b8a934153041170406&q=";
 	var lat;
 	var lon;
 
@@ -52,7 +52,7 @@ function renderData(data){
 	
 	// Rendering current weather info
 	currentWeatherContainer.append('<div class="current-weather-info">Current weather info</div>');
-	currentWeatherContainer.append('<div><img src="http:' + data.current.condition.icon + '"><div class="current-temp">' + data.current.temp_c + '&#8451</div></div>');
+	currentWeatherContainer.append('<div><img src="https:' + data.current.condition.icon + '"><div class="current-temp">' + data.current.temp_c + '&#8451</div></div>');
 	currentWeatherContainer.append('<div class="">' + data.current.condition.text + '</div>');
 	currentWeatherContainer.append('<div class="">' + getFormatedDate(data.current.last_updated_epoch, 'hh:mm:ss A  DD/MMM/YY ') + '</div>');
 	currentWeatherContainer.append(

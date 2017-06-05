@@ -1,0 +1,33 @@
+.current-temp {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.heading {
+	text-align: center;
+	margin: 20px 0 35px 0;
+}
+
+.current-weather-info {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.chart-container {
+	min-width: 310px; 
+	height: 500px; 
+	max-width: 700px; 
+	margin: 0 auto
+}
+
+.hidden {
+	display: node;
+}
+
+.error {
+	width: 400px;
+    	height: 400px;
+    	margin: 0 auto;
+    	margin-top: 100px;
+}
